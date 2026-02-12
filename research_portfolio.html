@@ -378,6 +378,30 @@
     </style>
   </head>
   <body>
+    <!-- ============ NAVIGATION ============ -->
+    <div
+      style="
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 0;
+      "
+    >
+      <div class="container">
+        <a
+          href="index.html"
+          style="
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+          "
+        >
+          ← Back to Main Portfolio
+        </a>
+      </div>
+    </div>
     <!-- ============ HERO ============ -->
     <div class="hero">
       <h1>AI-Accelerated Scientific Discovery</h1>
@@ -388,8 +412,8 @@
       </p>
       <div class="stats">
         <div class="stat">
-          <span class="stat-value">2</span>
-          <span class="stat-label">Papers Completed</span>
+          <span class="stat-value">3</span>
+          <span class="stat-label">Papers</span>
         </div>
         <div class="stat">
           <span class="stat-value">8</span>
@@ -407,14 +431,14 @@
       <section>
         <h2>Overview</h2>
         <p class="section-intro">
-          This project demonstrates a new paradigm for scientific research:
-          using locally-hosted large language models as hypothesis generators
-          inside evolutionary search loops, then rigorously validating every
-          discovery with classical statistics. Over four weeks, I produced two
-          publication-ready papers, evolved novel algorithms that outperform
-          hand-tuned baselines, and discovered a previously unreported
-          biological phenomenon in the largest available connectome dataset —
-          all on a single consumer GPU with zero cloud spend.
+          This project explores an approach to scientific research: using
+          locally-hosted large language models as hypothesis generators inside
+          evolutionary search loops, then rigorously validating discoveries with
+          classical statistics. Over four weeks, I completed research on neural
+          network regularization schedules and connectome topology, evolved
+          algorithms that show improvements over hand-tuned baselines, and
+          applied graph-theoretic analysis to large-scale neural connectivity
+          data — all on a single consumer GPU with zero cloud spend.
         </p>
       </section>
 
@@ -428,7 +452,10 @@
               Paper A: LLM-Evolved Regularization Schedules Prevent Posterior
               Collapse in LFADS
             </h3>
-            <span class="badge badge-complete">Complete</span>
+            <span class="badge badge-preprint">Preprint · bioRxiv</span>
+            <span class="badge badge-submitted"
+              >Under Review · PLOS Comp. Bio.</span
+            >
           </div>
 
           <p>
@@ -520,7 +547,7 @@
               Paper B: GABAergic Neurons Form a Dense Inhibitory Backbone in the
               <em>Drosophila</em> Connectome
             </h3>
-            <span class="badge badge-submitted">Submitted · bioRxiv</span>
+            <span class="badge badge-submitted">In Progress</span>
           </div>
 
           <p>
@@ -605,6 +632,36 @@
             <a href="https://github.com/jknight137/flywire-gaba-topology"
               >GitHub Repository</a
             >
+          </div>
+        </div>
+
+        <!-- ============ PRIOR WORK ============ -->
+        <div class="paper-card" style="margin-top: 2rem">
+          <div class="paper-header">
+            <h3>
+              Knight Watch: Ubiquitous Computing Enhancements To Sleep Quality
+              With Acoustic Analysis
+            </h3>
+            <span class="badge badge-preprint">Published · arXiv 2024</span>
+          </div>
+
+          <p>
+            A wearable, non-intrusive device for snoring detection and
+            remediation, placed under or alongside a pillow. Uses on-device
+            sensors and machine learning to detect snoring in real time and
+            employs gentle vibrations to prompt positional changes. Connects via
+            API to a cloud platform for longitudinal analysis of sleep patterns
+            and environmental context.
+            <em
+              >Prior work from graduate school — different domain, but
+              demonstrates breadth across ML-for-health, embedded systems, and
+              ubiquitous computing.</em
+            >
+          </p>
+
+          <div class="links-row">
+            <a href="https://arxiv.org/abs/2401.08991">arXiv Preprint</a>
+            <a href="https://arxiv.org/pdf/2401.08991">PDF</a>
           </div>
         </div>
       </section>
