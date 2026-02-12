@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Portfolio — John Knight</title>
+    <style>
+      :root {
+        --primary: #1a365d;
+        --accent: #2b6cb0;
+        --accent-light: #ebf4ff;
+        --text: #2d3748;
+        --text-light: #718096;
+        --bg: #ffffff;
+        --border: #e2e8f0;
+        --success: #38a169;
+        --warning: #d69e2e;
+        --card-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.06);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: var(--text);
+        line-height: 1.7;
+        background: #f7fafc;
+      }
+
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--accent) 100%
+        );
+        color: white;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        max-width: 700px;
+        margin: 0 auto 1.5rem;
+      }
+
+      .hero .stats {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .hero .stat {
+        text-align: center;
+      }
+
+      .hero .stat-value {
+        font-size: 2rem;
+        font-weight: 700;
+        display: block;
+      }
+
+      .hero .stat-label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.85;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      section {
+        padding: 3rem 0;
+      }
+
+      section + section {
+        border-top: 1px solid var(--border);
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+      }
+
+      .section-intro {
+        color: var(--text-light);
+        margin-bottom: 2rem;
+        font-size: 1.05rem;
+      }
+
+      /* Paper cards */
+      .paper-card {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--card-shadow);
+      }
+
+      .paper-card .paper-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .paper-card h3 {
+        margin: 0;
+        flex: 1;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 0.2rem 0.7rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+      }
+
+      .badge-submitted {
+        background: #c6f6d5;
+        color: #22543d;
+      }
+
+      .badge-complete {
+        background: #bee3f8;
+        color: #2a4365;
+      }
+
+      .badge-preprint {
+        background: #fefcbf;
+        color: #744210;
+      }
+
+      .finding {
+        background: var(--accent-light);
+        border-left: 4px solid var(--accent);
+        padding: 1rem 1.25rem;
+        margin: 1rem 0;
+        border-radius: 0 6px 6px 0;
+      }
+
+      .finding strong {
+        color: var(--primary);
+      }
+
+      .results-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.92rem;
+      }
+
+      .results-table th {
+        background: var(--accent-light);
+        color: var(--primary);
+        text-align: left;
+        padding: 0.6rem 0.8rem;
+        font-weight: 600;
+        border-bottom: 2px solid var(--accent);
+      }
+
+      .results-table td {
+        padding: 0.5rem 0.8rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .results-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .results-table .highlight {
+        font-weight: 600;
+        color: var(--success);
+      }
+
+      /* Track grid */
+      .track-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      .track-card {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: var(--card-shadow);
+        transition: transform 0.15s ease;
+      }
+
+      .track-card:hover {
+        transform: translateY(-2px);
+      }
+
+      .track-card .track-name {
+        font-weight: 700;
+        color: var(--primary);
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .track-card .track-domain {
+        color: var(--accent);
+        font-size: 0.85rem;
+        margin-bottom: 0.75rem;
+        font-weight: 500;
+      }
+
+      .track-card p {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-bottom: 0;
+      }
+
+      /* Methodology section */
+      .method-step {
+        display: flex;
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+        align-items: flex-start;
+      }
+
+      .method-step .step-num {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        background: var(--accent);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .method-step .step-content h4 {
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+      }
+
+      .method-step .step-content p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      /* Impact list */
+      .impact-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .impact-list li {
+        position: relative;
+        padding: 0.5rem 0 0.5rem 1.75rem;
+        font-size: 0.95rem;
+      }
+
+      .impact-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .code-block {
+        background: #1a202c;
+        color: #e2e8f0;
+        padding: 1.25rem;
+        border-radius: 6px;
+        font-family: "Cascadia Code", "Fira Code", "Consolas", monospace;
+        font-size: 0.85rem;
+        overflow-x: auto;
+        margin: 1rem 0;
+        line-height: 1.5;
+      }
+
+      .code-block .comment {
+        color: #68d391;
+      }
+      .code-block .keyword {
+        color: #90cdf4;
+      }
+      .code-block .number {
+        color: #fbd38d;
+      }
+      .code-block .function {
+        color: #b794f4;
+      }
+
+      .links-row {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .links-row a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.4rem 1rem;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 500;
+        transition: all 0.15s ease;
+      }
+
+      .links-row a:hover {
+        background: var(--accent);
+        color: white;
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        color: var(--text-light);
+        font-size: 0.85rem;
+        border-top: 1px solid var(--border);
+      }
+
+      @media (max-width: 600px) {
+        .hero h1 {
+          font-size: 1.75rem;
+        }
+        .hero .stats {
+          gap: 1.5rem;
+        }
+        .track-grid {
+          grid-template-columns: 1fr;
+        }
+        .paper-card .paper-header {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============ HERO ============ -->
+    <div class="hero">
+      <h1>AI-Accelerated Scientific Discovery</h1>
+      <p class="subtitle">
+        A 4-week research sprint applying LLM-driven evolutionary search to open
+        problems in computational neuroscience, connectomics, graph theory, and
+        combinatorics.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-value">2</span>
+          <span class="stat-label">Papers Completed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">8</span>
+          <span class="stat-label">Research Tracks</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">$0</span>
+          <span class="stat-label">Cloud API Cost</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value">6.5h</span>
+          <span class="stat-label">Total GPU Time</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- ============ OVERVIEW ============ -->
+      <section>
+        <h2>Overview</h2>
+        <p class="section-intro">
+          This project demonstrates a new paradigm for scientific research:
+          using locally-hosted large language models as hypothesis generators
+          inside evolutionary search loops, then rigorously validating every
+          discovery with classical statistics. Over four weeks, I produced two
+          publication-ready papers, evolved novel algorithms that outperform
+          hand-tuned baselines, and discovered a previously unreported
+          biological phenomenon in the largest available connectome dataset —
+          all on a single consumer GPU with zero cloud spend.
+        </p>
+      </section>
+
+      <!-- ============ PAPER A ============ -->
+      <section>
+        <h2>Published Research</h2>
+
+        <div class="paper-card">
+          <div class="paper-header">
+            <h3>
+              Paper A: LLM-Evolved Regularization Schedules Prevent Posterior
+              Collapse in LFADS
+            </h3>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+
+          <p>
+            <strong>Problem:</strong> Latent Factor Analysis via Dynamical
+            Systems (LFADS) is a deep generative model for extracting neural
+            population dynamics from high-dimensional neural recordings. It
+            suffers from <em>posterior collapse</em> — a training failure where
+            the KL divergence vanishes, making learned latent variables
+            uninformative. The standard fix (Population-Based Training) requires
+            massive compute.
+          </p>
+
+          <div class="finding">
+            <strong>Key Discovery:</strong> An LLM-evolved "patience then push"
+            regularization schedule maintains KL divergence
+            <strong>6.5× higher</strong> than baseline (n=10 seeds, p&lt;0.001),
+            preventing posterior collapse across all three Neural Latents
+            Benchmark datasets — discovered automatically by evolutionary search
+            in ~5 hours on a single RTX 3080.
+          </div>
+
+          <p>
+            <strong>Approach:</strong> I framed LFADS hyperparameter scheduling
+            as a <em>program synthesis</em> problem: evolve a Python function
+            <code>schedule(epoch, max_epochs, recon, kl_ic)</code> that
+            dynamically adjusts regularization weights during training. Using
+            FunSearch (LLM-driven evolutionary search) with DeepSeek-Coder 6.7B
+            running locally via Ollama, 500 candidate schedules were generated
+            and evaluated. The best schedule uses reconstruction-aware
+            adaptation — reducing KL pressure when reconstruction loss is high
+            and increasing it when the model is fitting data well.
+          </p>
+
+          <p>
+            <strong>Counter-intuitive insight:</strong> The evolved schedule
+            starts with low but non-trivial KL pressure (β=0.01), then ramps
+            aggressively in the second half of training — the opposite of
+            standard KL annealing (warm-up) wisdom in the VAE literature.
+          </p>
+
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Dataset</th>
+                <th>Epochs</th>
+                <th>Final KL_IC</th>
+                <th>Collapsed?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MC Maze Small (10.6 MB)</td>
+                <td>500</td>
+                <td class="highlight">0.2007</td>
+                <td class="highlight">No</td>
+              </tr>
+              <tr>
+                <td>MC Maze Medium (25 MB)</td>
+                <td>200</td>
+                <td class="highlight">0.5279</td>
+                <td class="highlight">No</td>
+              </tr>
+              <tr>
+                <td>MC Maze Large (53 MB)</td>
+                <td>200</td>
+                <td class="highlight">0.1408</td>
+                <td class="highlight">No</td>
+              </tr>
+              <tr>
+                <td>Baseline (any dataset)</td>
+                <td>any</td>
+                <td>&lt;0.01</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="links-row">
+            <a href="https://github.com/jknight137/lfads-funsearch-scheduling"
+              >GitHub Repository</a
+            >
+          </div>
+        </div>
+
+        <!-- ============ PAPER B ============ -->
+        <div class="paper-card">
+          <div class="paper-header">
+            <h3>
+              Paper B: GABAergic Neurons Form a Dense Inhibitory Backbone in the
+              <em>Drosophila</em> Connectome
+            </h3>
+            <span class="badge badge-submitted">Submitted · bioRxiv</span>
+          </div>
+
+          <p>
+            <strong>Problem:</strong> The FlyWire consortium released the first
+            complete connectome of an adult
+            <em>Drosophila melanogaster</em> brain — 77,607 neurons with
+            neurotransmitter-type annotations. While the raw connectivity was
+            known, no one had systematically analyzed how neurotransmitter
+            identity shapes the mesoscale topology of the network.
+          </p>
+
+          <div class="finding">
+            <strong>Key Discovery:</strong> GABAergic (inhibitory) neurons form
+            extraordinarily dense local clusters — GABA-GABA transitivity is
+            <strong>714× higher</strong> than the next-closest cross-type pair
+            (95% CI: 607–883×, permutation test p&lt;0.001). Furthermore,
+            <strong
+              >100% of the 20 highest-degree hub neurons are GABAergic</strong
+            >
+            (6.2× enrichment, p = 1.5 × 10<sup>−16</sup>), forming an inhibitory
+            control backbone for global brain coordination. This dual role —
+            dense local clustering <em>and</em> global hub dominance — had not
+            been previously reported.
+          </div>
+
+          <p>
+            <strong>Approach:</strong> I constructed 21 neurotransmitter-pair
+            subnetworks from 180,799 reciprocal connectivity pairs (FlyWire
+            v630), computing graph-theoretic metrics (transitivity, giant
+            component fraction, degree distribution) for each. Statistical
+            validation used bootstrap resampling (1,000 iterations) for
+            confidence intervals and a permutation test (1,000 iterations,
+            shuffled NT labels) to confirm the signal is biological, not
+            structural. Hub enrichment was tested across degree thresholds
+            (k=20–500) using binomial tests.
+          </p>
+
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>NT Pair</th>
+                <th>Transitivity</th>
+                <th>Giant Component</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>GABA–GABA</strong></td>
+                <td class="highlight">0.396</td>
+                <td>44.7%</td>
+                <td>Dense cliques, fragmented</td>
+              </tr>
+              <tr>
+                <td>SER–SER</td>
+                <td>0.299</td>
+                <td>8.2%</td>
+                <td>Tight local modularity</td>
+              </tr>
+              <tr>
+                <td>DA–DA</td>
+                <td>0.149</td>
+                <td>51.2%</td>
+                <td>Moderate clustering</td>
+              </tr>
+              <tr>
+                <td>ACh–ACh</td>
+                <td>0.062</td>
+                <td>99.1%</td>
+                <td>Sparse, far-reaching</td>
+              </tr>
+              <tr>
+                <td>ACh–GABA</td>
+                <td>0.0005</td>
+                <td>91.3%</td>
+                <td>Spanning, no triangles</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="links-row">
+            <a href="https://github.com/jknight137/flywire-gaba-topology"
+              >GitHub Repository</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ THE APPROACH ============ -->
+      <section>
+        <h2>The Approach: FunSearch with Local LLMs</h2>
+        <p class="section-intro">
+          Every research track in this project follows the same core methodology
+          — a tight loop of LLM-driven code generation, automated evaluation,
+          and evolutionary selection, all running locally with zero cloud
+          dependency.
+        </p>
+
+        <div class="method-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Formulate as Program Synthesis</h4>
+            <p>
+              Frame the research question as: "evolve a Python function that
+              optimizes a measurable objective." This transforms scientific
+              discovery into a search over program space — a domain where LLMs
+              excel.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Seed with Domain Knowledge</h4>
+            <p>
+              Provide the LLM with hand-crafted seed functions encoding known
+              approaches (standard schedules, known lattice constructions,
+              algebraic graph constructions). Evolution starts from competence,
+              not randomness.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Evolve with Local LLMs</h4>
+            <p>
+              Use Qwen2.5-Coder 7B or DeepSeek-Coder 6.7B via Ollama to mutate
+              and recombine top-performing programs. Tournament selection
+              maintains diversity. Typical runs: 50–500 candidates, fully
+              automated, ~5 hours on a consumer GPU.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Validate Rigorously</h4>
+            <p>
+              Every discovery passes through a 4-checkpoint validation protocol:
+              computational verification, statistical significance testing
+              (bootstrap CIs, permutation tests), cross-dataset replication, and
+              a literature novelty check. No result is reported without passing
+              all four.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ADDITIONAL TRACKS ============ -->
+      <section>
+        <h2>Additional Research Tracks</h2>
+        <p class="section-intro">
+          Beyond the two published papers, I applied the same FunSearch
+          methodology to several other open problems in mathematics and graph
+          theory — demonstrating broad applicability.
+        </p>
+
+        <div class="track-grid">
+          <div class="track-card">
+            <div class="track-name">OMEGA-C: GNN Message Evolution</div>
+            <div class="track-domain">Graph Neural Networks × Connectomics</div>
+            <p>
+              Evolved GNN message-passing functions for neuron-type
+              classification on the FlyWire connectome. Best evolved function:
+              <strong>F1=0.911</strong>, outperforming attention-based
+              baselines. Ablation study revealed synapse weight alone
+              outperforms all 9 edge features (+18%), showing topology trumps
+              biochemistry for functional role prediction.
+            </p>
+          </div>
+
+          <div class="track-card">
+            <div class="track-name">EPSILON: Kissing Numbers</div>
+            <div class="track-domain">Discrete Geometry / Sphere Packing</div>
+            <p>
+              Attacking open kissing number lower bounds (dimensions 5–7, 9–12)
+              using evolutionary search over sphere-packing heuristics. Seed
+              constructions from D<sub>n</sub> root systems, E<sub>8</sub>
+              lattice, and cross-polytopes. Any improvement is a publishable
+              result.
+            </p>
+          </div>
+
+          <div class="track-card">
+            <div class="track-name">DELTA: Cap Set Problem</div>
+            <div class="track-domain">Additive Combinatorics</div>
+            <p>
+              Applying FunSearch to find large cap sets in Z<sub>3</sub
+              ><sup>n</sup> — sets with no three collinear points. Reproducing
+              and extending DeepMind's original FunSearch results using
+              locally-hosted LLMs and evolved priority functions for greedy
+              construction.
+            </p>
+          </div>
+
+          <div class="track-card">
+            <div class="track-name">ZETA: Extremal Graphs</div>
+            <div class="track-domain">Extremal Graph Theory</div>
+            <p>
+              Evolving graph construction heuristics to maximize edges in
+              girth-≥5 graphs (no triangles or 4-cycles). Best result:
+              <strong
+                >71 edges on 31 vertices (88.8% of theoretical bound)</strong
+              >, benchmarked against IJCAI 2024 AlphaZero+Tabu methods.
+            </p>
+          </div>
+
+          <div class="track-card">
+            <div class="track-name">GAMMA: FunSearch Framework</div>
+            <div class="track-domain">AI Infrastructure</div>
+            <p>
+              Adapted Google DeepMind's FunSearch framework for local execution
+              with Claude and Ollama backends. Supports bin packing, cap sets,
+              admissible sets, and custom problem domains. Foundation layer
+              powering all other evolution-based tracks.
+            </p>
+          </div>
+
+          <div class="track-card">
+            <div class="track-name">ALPHA: Neural Dynamics</div>
+            <div class="track-domain">Computational Neuroscience</div>
+            <p>
+              Trained LFADS on Neural Latents Benchmark datasets. Diagnosed KL
+              collapse as a scheduling problem (not architectural — confirmed
+              across latent dims 2–256). This diagnosis directly motivated the
+              Paper A evolution approach.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WHY THIS MATTERS ============ -->
+      <section>
+        <h2>Why This Matters</h2>
+
+        <h3>A New Research Paradigm</h3>
+        <p>
+          This project demonstrates that
+          <strong
+            >a single researcher with a consumer GPU can produce
+            publication-quality scientific discoveries</strong
+          >
+          by treating LLMs as hypothesis generators inside rigorous evaluation
+          loops. The key innovation is not any single finding, but the
+          methodology itself:
+        </p>
+
+        <ul class="impact-list">
+          <li>
+            <strong>Zero cloud cost:</strong> All LLM inference runs locally via
+            Ollama. The entire project — two papers, multiple open-problem
+            attacks, thousands of candidate evaluations — used 6.5 GPU-hours on
+            an RTX 3080 and $0 in API fees.
+          </li>
+          <li>
+            <strong>Domain-agnostic methodology:</strong> The same FunSearch
+            loop produced results in computational neuroscience (LFADS
+            scheduling), connectomics (GNN messages), discrete geometry (kissing
+            numbers), combinatorics (cap sets), and graph theory (extremal
+            graphs).
+          </li>
+          <li>
+            <strong>Counter-intuitive discoveries:</strong> The evolved LFADS
+            schedule contradicts standard KL annealing wisdom. The GABA rich
+            club finding reveals inhibitory dominance at the network's core.
+            These are results humans might not have hypothesized — but the LLM's
+            breadth of pattern-mixing explored the right corners of the search
+            space.
+          </li>
+          <li>
+            <strong>Rigorous validation pipeline:</strong> Every finding passes
+            four checkpoints: computational verification, statistical testing
+            (bootstrap CIs, permutation tests, p-values), cross-dataset
+            replication, and literature novelty checks. AI accelerates
+            hypothesis generation 3–5×, but human judgment remains essential for
+            experimental design and validation.
+          </li>
+          <li>
+            <strong>Reproducible and open:</strong> All code, evolved functions,
+            statistical tests, and paper drafts are publicly available with full
+            provenance. Results can be independently replicated on commodity
+            hardware.
+          </li>
+        </ul>
+
+        <h3 style="margin-top: 2rem">Technical Skills Demonstrated</h3>
+        <ul class="impact-list">
+          <li>
+            <strong>Deep learning:</strong> PyTorch, PyTorch Lightning, LFADS
+            variational autoencoders, GNNs (PyTorch Geometric), attention
+            mechanisms, KL divergence dynamics
+          </li>
+          <li>
+            <strong>Graph theory & network science:</strong> Transitivity, rich
+            club analysis, degree distributions, power-law fitting, small-world
+            characterization, motif analysis
+          </li>
+          <li>
+            <strong>LLM engineering:</strong> Local model hosting (Ollama),
+            prompt engineering for code generation, evolutionary search with LLM
+            mutations, model comparison (Qwen vs DeepSeek)
+          </li>
+          <li>
+            <strong>Statistical methods:</strong> Bootstrap resampling,
+            permutation testing, ablation studies, cross-validation,
+            significance testing with proper multiple-comparison awareness
+          </li>
+          <li>
+            <strong>Scientific computing:</strong> DANDI/NWB neural data
+            formats, FlyWire connectome analysis, Neural Latents Benchmark,
+            publication-quality figure generation
+          </li>
+          <li>
+            <strong>Software engineering:</strong> Multi-track monorepo,
+            reproducible environments (conda/pip), island-model parallelism,
+            checkpointing, automated evaluation pipelines
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>John Knight · University of North Dakota · 2026</footer>
+  </body>
+</html>
