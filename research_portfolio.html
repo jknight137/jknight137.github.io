@@ -431,10 +431,11 @@
           locally-hosted large language models as hypothesis generators inside
           evolutionary search loops, then rigorously validating discoveries with
           classical statistics. Over four weeks, I completed research on neural
-          network regularization schedules and connectome topology, evolved
-          algorithms that show improvements over hand-tuned baselines, and
-          applied graph-theoretic analysis to large-scale neural connectivity
-          data — all on a single consumer GPU with zero cloud spend.
+          network regularization schedules, connectome topology, and
+          LLM-driven GNN architecture search — evolving algorithms that
+          outperform hand-tuned baselines and applying graph-theoretic
+          analysis to large-scale neural connectivity data — all on a single
+          consumer laptop with zero cloud spend.
         </p>
       </section>
 
@@ -635,6 +636,109 @@
           </div>
         </div>
 
+        <!-- ============ PAPER C ============ -->
+        <div class="paper-card">
+          <div class="paper-header">
+            <h3>
+              Paper C: LLM-Evolved Message Functions for Connectome Neuron
+              Classification
+            </h3>
+            <span class="badge badge-complete">Complete</span>
+          </div>
+
+          <p>
+            <strong>Problem:</strong> Graph neural networks are the standard tool
+            for classifying neurons in brain connectomes — but someone has to
+            <em>design</em> the message-passing function that controls how
+            information flows between neurons. Standard architectures (GCN, GAT,
+            GraphSAGE) were built for social networks and citation graphs, not
+            brains. Neuroscience data has directed connections, neurotransmitter
+            types, and varying synapse strengths — properties that generic
+            architectures don't exploit.
+          </p>
+
+          <div class="finding">
+            <strong>Key Discovery:</strong> Using FunSearch to evolve the
+            message-passing function itself, we discovered a novel architecture
+            that combines four computational motifs — feature differences,
+            ratios, element-wise products, and dual sigmoid gating — in a
+            composition <strong>no human designed</strong> and no standard GNN
+            captures. It achieves <strong>F1 = 0.911</strong> on synthetic
+            benchmarks, outperforming all hand-designed baselines. Critically,
+            <strong>all experiments ran on CPU only</strong> using open-weight 7B
+            LLMs — no GPU, no paid API calls.
+          </div>
+
+          <p>
+            <strong>Approach:</strong> I seeded a population-based island model
+            with 8 hand-crafted message functions (simple pass-through,
+            attention, gating, difference, etc.) and let three different LLMs —
+            Qwen2.5-Coder 7B, DeepSeek-R1 7B, and DeepSeek-Coder 6.7B — mutate
+            and improve them over 30 generations. The LLMs propose code
+            mutations; an automated evaluator trains a GNN and measures macro F1
+            on a 3-class neuron classification task (Hub, Broadcast, Integrate
+            neurons from the FlyWire <em>Drosophila</em> connectome).
+          </p>
+
+          <p>
+            <strong>What the AI discovered:</strong> The best evolved function
+            computes messages through four parallel pathways — absolute
+            differences (how dissimilar are connected neurons?), feature ratios
+            (asymmetric connectivity), Hadamard products (feature agreement), and
+            dual sigmoid gating — then multiplies them together. No seed
+            function uses more than one of these motifs. The LLM discovered
+            their <em>composition</em> through 13 generations of evolutionary
+            refinement.
+          </p>
+
+          <p>
+            <strong>Honest limitation:</strong> Transfer to real FlyWire data
+            drops performance to F1 = 0.47–0.65, with simpler functions
+            transferring better than complex ones — an important finding about
+            overfitting in evolved programs. Edge feature ablation revealed that
+            synapse weight alone outperforms the full 9-feature set by 18%,
+            which the evolved function independently "discovered" by treating
+            edge attributes as scalars.
+          </p>
+
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>LLM Backend</th>
+                <th>Best F1</th>
+                <th>Gens to Peak</th>
+                <th>Wall Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Qwen2.5-Coder 7B</strong></td>
+                <td class="highlight">0.902</td>
+                <td class="highlight">13</td>
+                <td>~1 hr (CPU)</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-R1 7B</td>
+                <td>0.892</td>
+                <td>27</td>
+                <td>~2 hr (CPU)</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-Coder 6.7B</td>
+                <td>0.866</td>
+                <td>0 (seed only)</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="links-row">
+            <a href="https://github.com/jknight137/gnn-funsearch"
+              >GitHub Repository</a
+            >
+          </div>
+        </div>
+
         <!-- ============ PRIOR WORK ============ -->
         <div class="paper-card" style="margin-top: 2rem">
           <div class="paper-header">
@@ -734,25 +838,12 @@
       <section>
         <h2>Additional Research Tracks</h2>
         <p class="section-intro">
-          Beyond the two published papers, I applied the same FunSearch
+          Beyond the three papers above, I applied the same FunSearch
           methodology to several other open problems in mathematics and graph
           theory — demonstrating broad applicability.
         </p>
 
         <div class="track-grid">
-          <div class="track-card">
-            <div class="track-name">OMEGA-C: GNN Message Evolution</div>
-            <div class="track-domain">Graph Neural Networks × Connectomics</div>
-            <p>
-              Evolved GNN message-passing functions for neuron-type
-              classification on the FlyWire connectome. Best evolved function:
-              <strong>F1=0.911</strong>, outperforming attention-based
-              baselines. Ablation study revealed synapse weight alone
-              outperforms all 9 edge features (+18%), showing topology trumps
-              biochemistry for functional role prediction.
-            </p>
-          </div>
-
           <div class="track-card">
             <div class="track-name">EPSILON: Kissing Numbers</div>
             <div class="track-domain">Discrete Geometry / Sphere Packing</div>
