@@ -788,75 +788,56 @@
 
       <!-- ============ THE APPROACH ============ -->
       <section>
-        <h2>The Approach: FunSearch with Local LLMs</h2>
+        <h2>Methodology</h2>
         <p class="section-intro">
-          Every research track in this project follows the same core methodology
-          — a tight loop of LLM-driven code generation, automated evaluation,
-          and evolutionary selection, all running locally with zero cloud
-          dependency.
+          This project draws on three distinct methodological pillars, each
+          chosen to match the problem at hand. Not everything is LLM-driven --
+          the right tool depends on the question.
         </p>
 
-        <div class="method-step">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <h4>Formulate as Program Synthesis</h4>
-            <p>
-              Frame the research question as: "evolve a Python function that
-              optimizes a measurable objective." This transforms scientific
-              discovery into a search over program space — a domain where LLMs
-              excel.
-            </p>
-          </div>
-        </div>
+        <h3>1. Classical Statistical Analysis & Graph Theory</h3>
+        <p style="margin-bottom: 1.5rem">
+          Paper B and the ALPHA diagnostics use no LLMs at all. The GABA
+          clustering discovery came from systematic graph-theoretic analysis of
+          the FlyWire connectome: constructing neurotransmitter-pair
+          subnetworks, computing transitivity and degree distributions, then
+          validating with bootstrap resampling (1,000 iterations), permutation
+          tests (shuffled NT labels), binomial hub-enrichment tests, and motif
+          z-scores against null models. ALPHA's KL collapse diagnosis used
+          hyperparameter sweeps across latent dimensions 2--256 with standard
+          deep learning training (PyTorch Lightning).
+        </p>
 
-        <div class="method-step">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <h4>Seed with Domain Knowledge</h4>
-            <p>
-              Provide the LLM with hand-crafted seed functions encoding known
-              approaches (standard schedules, known lattice constructions,
-              algebraic graph constructions). Evolution starts from competence,
-              not randomness.
-            </p>
-          </div>
-        </div>
+        <h3>2. LLM-Driven Evolutionary Search (FunSearch)</h3>
+        <p style="margin-bottom: 1.5rem">
+          Papers A and C, plus the DELTA, EPSILON, and ZETA tracks, use
+          FunSearch -- framing research questions as program synthesis problems.
+          A locally-hosted LLM (Qwen2.5-Coder 7B or DeepSeek-Coder 6.7B via
+          Ollama) mutates and recombines Python functions in an evolutionary
+          loop. An automated evaluator scores each candidate, and tournament
+          selection maintains population diversity. This produced the LFADS
+          schedule that prevents KL collapse and the GNN message functions that
+          outperform hand-designed architectures. Typical runs: 50--500
+          candidates, fully automated, running on a single consumer GPU.
+        </p>
 
-        <div class="method-step">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <h4>Evolve with Local LLMs</h4>
-            <p>
-              Use Qwen2.5-Coder 7B or DeepSeek-Coder 6.7B via Ollama to mutate
-              and recombine top-performing programs. Tournament selection
-              maintains diversity. Typical runs: 50–500 candidates, fully
-              automated, ~5 hours on a consumer GPU.
-            </p>
-          </div>
-        </div>
-
-        <div class="method-step">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <h4>Validate Rigorously</h4>
-            <p>
-              Every discovery passes through a 4-checkpoint validation protocol:
-              computational verification, statistical significance testing
-              (bootstrap CIs, permutation tests), cross-dataset replication, and
-              a literature novelty check. No result is reported without passing
-              all four.
-            </p>
-          </div>
-        </div>
+        <h3>3. Rigorous Validation Pipeline</h3>
+        <p style="margin-bottom: 1.5rem">
+          Regardless of how a discovery is generated, every result passes
+          through a 4-checkpoint protocol: computational verification,
+          statistical significance testing (bootstrap CIs, permutation tests,
+          p-values), cross-dataset or cross-seed replication, and a literature
+          novelty check. AI can accelerate hypothesis generation, but human
+          judgment remains essential for experimental design and validation.
+        </p>
       </section>
 
       <!-- ============ ADDITIONAL TRACKS ============ -->
       <section>
         <h2>Additional Research Tracks</h2>
         <p class="section-intro">
-          Beyond the three papers above, I applied the same FunSearch
-          methodology to several other open problems in mathematics and graph
-          theory — demonstrating broad applicability.
+          Beyond the three papers, I applied these methods to several other
+          open problems in mathematics, graph theory, and combinatorics.
         </p>
 
         <div class="track-grid">
@@ -864,11 +845,12 @@
             <div class="track-name">EPSILON: Kissing Numbers</div>
             <div class="track-domain">Discrete Geometry / Sphere Packing</div>
             <p>
-              Attacking open kissing number lower bounds (dimensions 5–7, 9–12)
-              using evolutionary search over sphere-packing heuristics. Seed
-              constructions from D<sub>n</sub> root systems, E<sub>8</sub>
-              lattice, and cross-polytopes. Any improvement is a publishable
-              result.
+              Attacking open kissing number lower bounds (dimensions 5--7, 9--12)
+              with a hybrid approach: classical baselines (greedy construction,
+              simulated annealing, local optimization) plus LLM-evolved search
+              heuristics. Seed constructions from D<sub>n</sub> root systems,
+              E<sub>8</sub> lattice, and cross-polytopes. Any improvement is a
+              publishable result.
             </p>
           </div>
 
@@ -911,10 +893,12 @@
             <div class="track-name">ALPHA: Neural Dynamics</div>
             <div class="track-domain">Computational Neuroscience</div>
             <p>
-              Trained LFADS on Neural Latents Benchmark datasets. Diagnosed KL
-              collapse as a scheduling problem (not architectural — confirmed
-              across latent dims 2–256). This diagnosis directly motivated the
-              Paper A evolution approach.
+              Trained LFADS (a variational autoencoder for neural sequences) on
+              Neural Latents Benchmark datasets using PyTorch Lightning.
+              Hyperparameter sweeps across latent dimensions 2--256 diagnosed KL
+              collapse as a scheduling problem, not an architectural one. No
+              LLMs used -- this is classical deep learning experimentation that
+              motivated the Paper A evolution approach.
             </p>
           </div>
         </div>
@@ -938,33 +922,31 @@
 
         <ul class="impact-list">
           <li>
-            <strong>Zero cloud cost:</strong> All LLM inference runs locally via
-            Ollama. The entire project — two papers, multiple open-problem
-            attacks, thousands of candidate evaluations — used 6.5 GPU-hours on
-            an RTX 3080 and $0 in API fees.
+            <strong>Multiple methodologies, matched to the problem:</strong>
+            Classical graph analysis and statistics produced the GABA finding
+            (Paper B). LLM-driven evolutionary search produced the LFADS
+            schedule (Paper A) and evolved GNN architectures (Paper C).
+            Knowing when <em>not</em> to use AI is as important as knowing
+            when to use it.
           </li>
           <li>
-            <strong>Domain-agnostic methodology:</strong> The same FunSearch
-            loop produced results in computational neuroscience (LFADS
-            scheduling), connectomics (GNN messages), discrete geometry (kissing
-            numbers), combinatorics (cap sets), and graph theory (extremal
-            graphs).
+            <strong>Local-first LLM infrastructure:</strong> All evolutionary
+            search runs use locally-hosted 7B models via Ollama -- no cloud
+            API dependency for the FunSearch tracks. The entire project used
+            6.5 GPU-hours on an RTX 3080.
           </li>
           <li>
             <strong>Counter-intuitive discoveries:</strong> The evolved LFADS
             schedule contradicts standard KL annealing wisdom. The GABA rich
-            club finding reveals inhibitory dominance at the network's core.
-            These are results humans might not have hypothesized — but the LLM's
-            breadth of pattern-mixing explored the right corners of the search
-            space.
+            club finding -- produced by classical analysis, not AI -- reveals
+            inhibitory dominance at the connectome's core. Different methods,
+            both surprising.
           </li>
           <li>
             <strong>Rigorous validation pipeline:</strong> Every finding passes
             four checkpoints: computational verification, statistical testing
             (bootstrap CIs, permutation tests, p-values), cross-dataset
-            replication, and literature novelty checks. AI accelerates
-            hypothesis generation 3–5×, but human judgment remains essential for
-            experimental design and validation.
+            replication, and literature novelty checks.
           </li>
           <li>
             <strong>Reproducible and open:</strong> All code, evolved functions,
