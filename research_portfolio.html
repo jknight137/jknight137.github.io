@@ -431,11 +431,11 @@
           locally-hosted large language models as hypothesis generators inside
           evolutionary search loops, then rigorously validating discoveries with
           classical statistics. Over four weeks, I completed research on neural
-          network regularization schedules, connectome topology, and
-          LLM-driven GNN architecture search — evolving algorithms that
-          outperform hand-tuned baselines and applying graph-theoretic
-          analysis to large-scale neural connectivity data — all on a single
-          consumer laptop with zero cloud spend.
+          network regularization schedules, connectome topology, and LLM-driven
+          GNN architecture search — evolving algorithms that outperform
+          hand-tuned baselines and applying graph-theoretic analysis to
+          large-scale neural connectivity data — all on a single consumer laptop
+          with zero cloud spend.
         </p>
       </section>
 
@@ -650,9 +650,9 @@
           </div>
 
           <p>
-            <strong>Problem:</strong> Graph neural networks are the standard tool
-            for classifying neurons in brain connectomes — but someone has to
-            <em>design</em> the message-passing function that controls how
+            <strong>Problem:</strong> Graph neural networks are the standard
+            tool for classifying neurons in brain connectomes — but someone has
+            to <em>design</em> the message-passing function that controls how
             information flows between neurons. Standard architectures (GCN, GAT,
             GraphSAGE) were built for social networks and citation graphs, not
             brains. Neuroscience data has directed connections, neurotransmitter
@@ -668,8 +668,8 @@
             composition <strong>no human designed</strong> and no standard GNN
             captures. It achieves <strong>F1 = 0.911</strong> on synthetic
             benchmarks, outperforming all hand-designed baselines. Critically,
-            <strong>all experiments ran on CPU only</strong> using open-weight 7B
-            LLMs — no GPU, no paid API calls.
+            <strong>all experiments ran on CPU only</strong> using open-weight
+            7B LLMs — no GPU, no paid API calls.
           </div>
 
           <p>
@@ -687,8 +687,8 @@
             <strong>What the AI discovered:</strong> The best evolved function
             computes messages through four parallel pathways — absolute
             differences (how dissimilar are connected neurons?), feature ratios
-            (asymmetric connectivity), Hadamard products (feature agreement), and
-            dual sigmoid gating — then multiplies them together. No seed
+            (asymmetric connectivity), Hadamard products (feature agreement),
+            and dual sigmoid gating — then multiplies them together. No seed
             function uses more than one of these motifs. The LLM discovered
             their <em>composition</em> through 13 generations of evolutionary
             refinement.
@@ -743,7 +743,19 @@
         </div>
 
         <!-- ============ PRIOR WORK ============ -->
-        <div class="paper-card" style="margin-top: 2rem">
+        <h3
+          style="
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+          "
+        >
+          Other Research
+        </h3>
+        <div class="paper-card">
           <div class="paper-header">
             <h3>
               Knight Watch: Ubiquitous Computing Enhancements To Sleep Quality
@@ -760,9 +772,10 @@
             API to a cloud platform for longitudinal analysis of sleep patterns
             and environmental context.
             <em
-              >Prior work from graduate school — different domain, but
-              demonstrates breadth across ML-for-health, embedded systems, and
-              ubiquitous computing.</em
+              >Prior work from graduate school. Uses classical ML for acoustic
+              classification -- no LLMs involved. Included here to show breadth
+              across ML-for-health, embedded systems, and ubiquitous
+              computing.</em
             >
           </p>
 
