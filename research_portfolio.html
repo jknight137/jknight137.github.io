@@ -406,7 +406,7 @@
     <div class="hero">
       <h1>AI-Accelerated Scientific Discovery</h1>
       <p class="subtitle">
-        A 4-week research sprint applying LLM-driven evolutionary search to open
+        A research program applying LLM-driven evolutionary search to open
         problems in computational neuroscience, connectomics, graph theory, and
         combinatorics.
       </p>
@@ -427,15 +427,15 @@
       <section>
         <h2>Overview</h2>
         <p class="section-intro">
-          This project explores an approach to scientific research: using
-          locally-hosted large language models as hypothesis generators inside
-          evolutionary search loops, then rigorously validating discoveries with
-          classical statistics. Over four weeks, I completed research on neural
-          network regularization schedules, connectome topology, and LLM-driven
-          GNN architecture search — evolving algorithms that outperform
-          hand-tuned baselines and applying graph-theoretic analysis to
-          large-scale neural connectivity data — all on a single consumer laptop
-          with zero cloud spend.
+          This research program explores a systematic approach to scientific
+          discovery: using locally-hosted large language models as hypothesis
+          generators inside evolutionary search loops, then rigorously
+          validating discoveries with classical statistics. The work spans
+          neural network regularization schedules, connectome topology, and
+          LLM-driven GNN architecture search — evolving algorithms that
+          outperform hand-tuned baselines and applying graph-theoretic analysis
+          to large-scale neural connectivity data — with a deliberate focus on
+          resource-efficient, reproducible methods.
         </p>
       </section>
 
@@ -470,8 +470,8 @@
             regularization schedule maintains KL divergence
             <strong>6.5× higher</strong> than baseline (n=10 seeds, p&lt;0.001),
             preventing posterior collapse across all three Neural Latents
-            Benchmark datasets — discovered automatically by evolutionary search
-            in ~5 hours on a single RTX 3080.
+            Benchmark datasets — discovered automatically by evolutionary
+            search with no manual tuning.
           </div>
 
           <p>
@@ -669,7 +669,7 @@
             captures. It achieves <strong>F1 = 0.911</strong> on synthetic
             benchmarks, outperforming all hand-designed baselines. Critically,
             <strong>all experiments ran on CPU only</strong> using open-weight
-            7B LLMs — no GPU, no paid API calls.
+            7B LLMs with no paid API dependencies.
           </div>
 
           <p>
@@ -710,7 +710,7 @@
                 <th>LLM Backend</th>
                 <th>Best F1</th>
                 <th>Gens to Peak</th>
-                <th>Wall Time</th>
+                <th>Compute</th>
               </tr>
             </thead>
             <tbody>
@@ -718,19 +718,19 @@
                 <td><strong>Qwen2.5-Coder 7B</strong></td>
                 <td class="highlight">0.902</td>
                 <td class="highlight">13</td>
-                <td>~1 hr (CPU)</td>
+                <td>CPU only</td>
               </tr>
               <tr>
                 <td>DeepSeek-R1 7B</td>
                 <td>0.892</td>
                 <td>27</td>
-                <td>~2 hr (CPU)</td>
+                <td>CPU only</td>
               </tr>
               <tr>
                 <td>DeepSeek-Coder 6.7B</td>
                 <td>0.866</td>
                 <td>0 (seed only)</td>
-                <td>—</td>
+                <td>CPU only</td>
               </tr>
             </tbody>
           </table>
@@ -776,9 +776,8 @@
             API to a cloud platform for longitudinal analysis of sleep patterns
             and environmental context.
             <em
-              >Prior work from graduate school. Uses classical ML for acoustic
-              classification -- no LLMs involved. Included here to show breadth
-              across ML-for-health, embedded systems, and ubiquitous
+              >Uses classical ML for acoustic classification. Demonstrates
+              breadth across ML-for-health, embedded systems, and ubiquitous
               computing.</em
             >
           </p>
@@ -916,13 +915,13 @@
 
         <h3>A New Research Paradigm</h3>
         <p>
-          This project demonstrates that
+          This work demonstrates that
           <strong
-            >a single researcher with a consumer GPU can produce
+            >resource-efficient AI methods can produce
             publication-quality scientific discoveries</strong
           >
           by treating LLMs as hypothesis generators inside rigorous evaluation
-          loops. The key innovation is not any single finding, but the
+          loops. The key contribution is not any single finding, but the
           methodology itself:
         </p>
 
@@ -937,9 +936,10 @@
           </li>
           <li>
             <strong>Local-first LLM infrastructure:</strong> All evolutionary
-            search runs use locally-hosted 7B models via Ollama -- no cloud API
-            dependency for the FunSearch tracks. The entire project used 6.5
-            GPU-hours on an RTX 3080.
+            search runs use locally-hosted open-weight models via Ollama,
+            eliminating cloud API dependencies and ensuring full
+            reproducibility. The framework is designed to run on commodity
+            hardware, making the approach accessible to any research group.
           </li>
           <li>
             <strong>Counter-intuitive discoveries:</strong> The evolved LFADS
