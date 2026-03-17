@@ -9,10 +9,12 @@ Once deployed, this site will be available at: **https://jknight137.github.io**
 ## 📋 Overview
 
 This is a professional portfolio website showcasing:
+
 - Professional experience in AI/ML, DevOps, and Platform Engineering
+- Agentic AI platform leadership and enterprise automation work
 - Technical skills and expertise
 - Educational background and certifications
-- Publications and thought leadership
+- Books and thought leadership
 - Contact information
 
 ## 🚀 Deployment Instructions
@@ -70,7 +72,8 @@ git push -u origin main
 
 ```
 jknight137.github.io/
-├── index.html       # Main HTML page with all content
+├── _archive/        # Unpublished archived pages kept out of GitHub Pages
+├── index.html       # Main HTML page with all public content
 ├── styles.css       # CSS styling and responsive design
 └── README.md        # This file
 ```
@@ -103,10 +106,10 @@ Edit `styles.css` variables at the top (lines 10-18):
 
 ```css
 :root {
-    --primary-color: #2563eb;     /* Main brand color */
-    --secondary-color: #1e40af;   /* Secondary brand color */
-    --accent-color: #3b82f6;      /* Accent highlights */
-    /* ... other variables ... */
+  --primary-color: #2563eb; /* Main brand color */
+  --secondary-color: #1e40af; /* Secondary brand color */
+  --accent-color: #3b82f6; /* Accent highlights */
+  /* ... other variables ... */
 }
 ```
 
@@ -150,17 +153,20 @@ Then visit: `http://localhost:8000`
 ## 🛠️ Troubleshooting
 
 ### Site not appearing?
+
 - Check repository name is exactly `jknight137.github.io`
 - Verify repository is set to Public
 - Check Pages settings show source as `main` branch
 - Wait 5-10 minutes for initial deployment
 
 ### Changes not showing?
+
 - Hard refresh your browser (Ctrl+F5 or Cmd+Shift+R)
 - Clear browser cache
 - Check GitHub Actions tab for build status
 
 ### 404 Error?
+
 - Ensure `index.html` is in the root directory
 - Check file names are lowercase
 - Verify all files were pushed to GitHub

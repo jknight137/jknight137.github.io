@@ -470,8 +470,8 @@
             regularization schedule maintains KL divergence
             <strong>6.5× higher</strong> than baseline (n=10 seeds, p&lt;0.001),
             preventing posterior collapse across all three Neural Latents
-            Benchmark datasets — discovered automatically by evolutionary
-            search with no manual tuning.
+            Benchmark datasets — discovered automatically by evolutionary search
+            with no manual tuning.
           </div>
 
           <p>
@@ -917,8 +917,8 @@
         <p>
           This work demonstrates that
           <strong
-            >resource-efficient AI methods can produce
-            publication-quality scientific discoveries</strong
+            >resource-efficient AI methods can produce publication-quality
+            scientific discoveries</strong
           >
           by treating LLMs as hypothesis generators inside rigorous evaluation
           loops. The key contribution is not any single finding, but the
