@@ -1,6 +1,6 @@
 # jknight137.github.io
 
-Personal portfolio website for John Knight - AI & Technology Leader
+Personal portfolio website for John Knight - AI-enabled platform engineering leader and product creator.
 
 ## 🌐 Live Site
 
@@ -10,7 +10,10 @@ Once deployed, this site will be available at: **https://jknight137.github.io**
 
 This is a professional portfolio website showcasing:
 
-- Professional experience in AI/ML, DevOps, and Platform Engineering
+- AI-enabled platform engineering and developer tooling work
+- Selected builds, including Chess Master Quest - Idle by LearnTech Games
+- Applied AI, research engineering, and scientific computing projects
+- Professional experience in AI/ML, DevOps, and platform engineering
 - Agentic AI platform leadership and enterprise automation work
 - Technical skills and expertise
 - Educational background and certifications
@@ -73,6 +76,7 @@ git push -u origin main
 ```
 jknight137.github.io/
 ├── _archive/        # Unpublished archived pages kept out of GitHub Pages
+├── images/          # Local portfolio images and product artwork
 ├── index.html       # Main HTML page with all public content
 ├── styles.css       # CSS styling and responsive design
 └── README.md        # This file
@@ -92,13 +96,14 @@ jknight137.github.io/
 
 To update your information, edit `index.html`:
 
-1. **Hero Section**: Lines 28-40 - Your title and tagline
-2. **About Section**: Lines 43-65 - Your bio and credentials
-3. **Experience**: Lines 68-175 - Your work history
-4. **Skills**: Lines 178-235 - Your technical skills
-5. **Education**: Lines 238-280 - Degrees and certifications
-6. **Publications**: Lines 283-310 - Your books and papers
-7. **Contact**: Lines 313-343 - Contact information
+1. **Hero Section**: Your title, tagline, and primary proof points
+2. **About Section**: Your bio and credentials
+3. **Builds Section**: Selected products, AI tooling, and platform projects
+4. **Experience**: Your work history
+5. **Skills**: Your technical skills
+6. **Education**: Degrees and certifications
+7. **Writing**: Books and long-form technical writing
+8. **Contact**: Contact information
 
 ### Changing Colors
 
@@ -106,9 +111,9 @@ Edit `styles.css` variables at the top (lines 10-18):
 
 ```css
 :root {
-  --primary-color: #2563eb; /* Main brand color */
-  --secondary-color: #1e40af; /* Secondary brand color */
-  --accent-color: #3b82f6; /* Accent highlights */
+  --primary-color: #0f766e; /* Main brand color */
+  --secondary-color: #0f172a; /* Secondary brand color */
+  --accent-color: #ea580c; /* Accent highlights */
   /* ... other variables ... */
 }
 ```

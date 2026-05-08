@@ -1,0 +1,9 @@
+I've been using LLMs for years now, but there was always a sense they weren't ready for a full production-grade use, until recently. As models improved and context windows grew bigger, there was a shift from "AI hallucinates" to "I am an AI-Powered Human." I believe that shift for me started with Claude Opus 4.5.
+
+ I was able to revisit all projects and start new ones and really push the limit of what could be done with LLM agents. I became a 5X engineer over night, and I've been trying to become a 10x engineer recently, I'm my professional job, and as an indie game developer. I've used Claude to help me write scientific papers and do research, to create 5+ indie game proof of concepts, to launch a small but successful App business (which I used to fund my Claude Code and other bills!) and create my Chess Steam game, Chess Master Quest. 
+
+I would not have been able to be so productive without Claude Code and it was Boris Cherny's posts that first spurred me to be aggressive with how I used agents, going from nursing one agent to dealing many windows (potentially on different projects) at the same time. 
+
+Beyond the individual empowerment, I also value Anthropic's positions on AI security and Safety. It is a transformative tool and there is great potential to be misused and it takes courage to not only focus on profit but on AI sustainability and remembering that the purpose is not to replace humans but to enhance them. 
+
+That's why I think I would be a great addition and why working at Anthropic would be a dream job. I would basically do it for free!  
