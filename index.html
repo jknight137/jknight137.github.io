@@ -1,653 +1,220 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="John Knight - AI-enabled platform engineering leader building developer platforms, DevOps automation, and practical AI tools for enterprise teams."
-    />
-    <title>John Knight | AI-Enabled Platform Engineering Leader</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="container">
-          <h1 class="logo">John Knight</h1>
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#builds">Builds</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#writing">Writing</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#172c33" />
+  <meta name="description" content="John Knight, Director of DevOps at Priority Commerce. AI platform and infrastructure engineering leadership, developer platforms, cloud reliability, and LLM research." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="John Knight | AI Platform &amp; Infrastructure Engineering" />
+  <meta property="og:description" content="Engineering leadership across developer platforms, cloud infrastructure, AI tooling, and reliability. Director of DevOps at Priority Commerce and Ph.D. researcher at Texas A&amp;M." />
+  <meta property="og:url" content="https://jknight137.github.io/" />
+  <link rel="canonical" href="https://jknight137.github.io/" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>John Knight | AI Platform &amp; Infrastructure Engineering</title>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"John Knight","url":"https://jknight137.github.io/","jobTitle":"Director of DevOps","worksFor":{"@type":"Organization","name":"Priority Commerce"},"sameAs":["https://linkedin.com/in/knightjohn","https://github.com/jknight137"]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#about" aria-label="John Knight, home"><span class="monogram" aria-hidden="true">JK</span><span>John Knight</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#experience">Experience</a>
+        <a href="#builds">Research &amp; open source</a>
+        <a href="#education">Education</a>
+        <a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
       </nav>
-    </header>
-
-    <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="container">
-          <div class="hero-content">
-            <h2 class="hero-title">AI-Enabled Platform Engineering Leader</h2>
-            <p class="hero-subtitle">
-              I lead platform, DevOps, and automation teams that help engineers
-              ship faster, operate safer, and adopt AI in practical ways.
-            </p>
-            <p class="hero-summary">
-              My background is enterprise platform engineering: CI/CD, cloud,
-              SRE, compliance automation, developer tooling, and hands-on
-              technical leadership. I am now focused on bringing AI into that
-              world responsibly, where it reduces toil and improves how teams
-              build software.
-            </p>
-            <div class="hero-cta">
-              <a href="#builds" class="btn btn-primary">Selected Builds</a>
-              <a
-                href="https://linkedin.com/in/knightjohn"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-secondary"
-                >LinkedIn</a
-              >
-              <a
-                href="https://github.com/jknight137"
-                target="_blank"
-                rel="noopener"
-                class="btn btn-secondary"
-                >GitHub</a
-              >
-            </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero" id="about" aria-labelledby="hero-title">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">John Knight <span class="eyebrow-divider">/</span> Plano, Texas</p>
+          <h1 id="hero-title">AI platform &amp; <br />infrastructure <br /><em>engineering.</em></h1>
+          <p class="hero-lead">Engineering leader across developer platforms, cloud infrastructure, and applied AI.</p>
+          <p class="hero-description">I bring 20+ years in software infrastructure and 10+ years leading DevOps, SRE, and developer-platform teams. My work combines technical strategy and team leadership with hands-on architecture, reliable delivery, and responsible AI adoption.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#experience">View experience <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="https://linkedin.com/in/knightjohn">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/jknight137">GitHub <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="section">
-        <div class="container">
-          <h2 class="section-title">About Me</h2>
-          <div class="about-content">
-            <p>
-              I am a senior platform engineering and DevOps leader with deep
-              experience building the systems behind software delivery: cloud
-              platforms, CI/CD, GitOps, observability, incident response,
-              compliance automation, and internal developer tooling.
-            </p>
-            <p>
-              My recent work is about AI-enabled development: identifying where
-              AI can remove real friction from engineering workflows, building
-              practical prototypes, and helping teams adopt new tools without
-              losing reliability, security, or governance.
-            </p>
-            <p>
-              Outside my day job, I build products end to end. I am the creator
-              of Chess Master Quest - Idle, a LearnTech Games title on Steam
-              with a live demo and a June 23, 2026 release. It is a large,
-              self-directed software project that reflects product judgment,
-              persistence, systems thinking, and follow-through.
-            </p>
-            <div class="credentials">
-              <span class="badge">MS Computer Science, HCI (Georgia Tech)</span>
-              <span class="badge">Creator, Chess Master Quest</span>
-              <span class="badge">MBA</span>
-              <span class="badge">12 Industry Certifications</span>
-              <span class="badge">Public Trust Clearance</span>
-              <span class="badge">Bilingual English/Spanish</span>
-            </div>
+        <aside class="scope-panel" aria-label="Current role and engineering focus">
+          <div class="current-role">
+            <p class="panel-label"><span class="status-dot" aria-hidden="true"></span> Current role</p>
+            <h2>Director of DevOps</h2>
+            <p class="current-company">Priority Commerce</p>
+            <p class="panel-date">September 2026 - present</p>
           </div>
-        </div>
-      </section>
-
-      <!-- Builds Section -->
-      <section id="builds" class="section section-alt">
-        <div class="container">
-          <h2 class="section-title">Selected Builds</h2>
-          <p class="section-intro">
-            A practical mix of enterprise platform leadership, AI-assisted
-            engineering work, and an independent product I built and published.
-          </p>
-          <div class="builds-grid">
-            <article class="build-card build-card-featured">
-              <div class="build-copy">
-                <p class="eyebrow">AI Powered Development</p>
-                <h3>Research Engineering & Enterprise Platform Work</h3>
-                <p>
-                  The work most relevant to AI companies is the bridge between
-                  engineering teams and the platforms they use: internal
-                  tooling, automation, observability, compliance, and applied
-                  experiments that make ambiguous technical work easier to run.
-                </p>
-                <ul class="build-list">
-                  <li>
-                    Led platform and DevOps work across CI/CD, GitOps,
-                    Kubernetes, Terraform, incident response, and compliance
-                    automation for large engineering organizations.
-                  </li>
-                  <li>
-                    Built and guided self-service developer tooling for 200+
-                    developers across commercial and federal environments.
-                  </li>
-                  <li>
-                    Independent research-engineering projects add evidence of
-                    experimentation, data analysis, and reproducible technical
-                    work alongside my enterprise platform background.
-                  </li>
-                </ul>
-              </div>
-              <div class="build-callout">
-                <span class="callout-number">200+</span>
-                <span class="callout-label"
-                  >developers supported by platform tooling</span
-                >
-              </div>
-            </article>
-
-            <article class="build-card">
-              <p class="eyebrow">LearnTech Games</p>
-              <h3>Chess Master Quest - Idle</h3>
-              <p>
-                Creator of a chess training and idle progression game published
-                on Steam, with a live demo and full release planned for June 23,
-                2026.
-              </p>
-              <a
-                class="game-logo"
-                href="https://store.steampowered.com/app/4493270/Chess_Master_Quest__Idle/"
-                target="_blank"
-                rel="noopener"
-                aria-label="Open Chess Master Quest - Idle on Steam"
-              >
-                <img
-                  src="images/Artboard%201.png"
-                  alt="Chess Master Quest logo"
-                  loading="lazy"
-                />
-              </a>
-              <ul class="build-list compact">
-                <li>
-                  Committed 500,000+ lines across gameplay, progression, chess
-                  learning content, UI, save/offline systems, and Steam release
-                  work.
-                </li>
-                <li>
-                  Includes 10,000 tactical puzzles, Woodpecker-style drills,
-                  famous game study, openings, endgames, achievements, and
-                  Stockfish challenge modes.
-                </li>
-                <li>
-                  Demonstrates product ownership, technical breadth, and the
-                  persistence required to carry a large independent product to
-                  release.
-                </li>
-              </ul>
-              <div class="project-links">
-                <a
-                  href="https://store.steampowered.com/app/4493270/Chess_Master_Quest__Idle/"
-                  target="_blank"
-                  rel="noopener"
-                  >Steam page</a
-                >
-                <a
-                  href="https://store.steampowered.com/app/4658440/Chess_Master_Quest__Idle_Demo/"
-                  target="_blank"
-                  rel="noopener"
-                  >Play demo</a
-                >
-                <a
-                  href="http://www.learntechgames.com"
-                  target="_blank"
-                  rel="noopener"
-                  >LearnTech Games</a
-                >
-              </div>
-            </article>
-
-            <article class="build-card">
-              <p class="eyebrow">Applied research</p>
-              <h3>Scientific Computing Projects</h3>
-              <p>
-                Independent projects applying graph analysis, ML experiments,
-                and statistical checks to technical problems in neuroscience and
-                network science.
-              </p>
-              <ul class="build-list compact">
-                <li>
-                  Built reproducible project code around LFADS scheduling, GNN
-                  message functions, connectome graph analysis, replication, and
-                  ablation studies.
-                </li>
-                <li>
-                  Used baselines, statistical validation, and cross-dataset
-                  testing to separate interesting results from weak or overfit
-                  ones.
-                </li>
-                <li>
-                  Useful signal for research-platform teams because it shows I
-                  can work near technical research problems and communicate
-                  results clearly.
-                </li>
-              </ul>
-              <div class="project-links">
-                <a
-                  href="https://github.com/jknight137/lfads-funsearch-scheduling"
-                  target="_blank"
-                  rel="noopener"
-                  >LFADS project</a
-                >
-                <a
-                  href="https://github.com/jknight137/gnn-funsearch"
-                  target="_blank"
-                  rel="noopener"
-                  >GNN project</a
-                >
-              </div>
-            </article>
+          <div class="scope-content">
+            <p class="panel-label">Engineering focus</p>
+            <dl class="scope-list">
+              <div><dt><span aria-hidden="true">01</span> Developer platforms</dt><dd>Backstage, self-service, developer experience</dd></div>
+              <div><dt><span aria-hidden="true">02</span> Delivery &amp; reliability</dt><dd>CI/CD, GitOps, SRE, observability</dd></div>
+              <div><dt><span aria-hidden="true">03</span> Cloud infrastructure</dt><dd>AWS, Azure, GCP, Kubernetes, Terraform</dd></div>
+              <div><dt><span aria-hidden="true">04</span> AI engineering</dt><dd>RAG, MCP, agent evaluation, governance</dd></div>
+            </dl>
           </div>
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section id="experience" class="section">
-        <div class="container">
-          <h2 class="section-title">Experience</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h3>
-                  Senior Manager - AI-Enabled Platform Engineering & DevOps
-                </h3>
-                <h4>Alight Solutions</h4>
-                <p class="date">July 2025 - Present | Remote</p>
-                <ul>
-                  <li>
-                    Acting as a player-coach across three engineering teams
-                    while directly shaping AI-enhanced workflows for build,
-                    test, deploy, and incident response
-                  </li>
-                  <li>
-                    Prototyping and integrating AI-assisted developer tooling
-                    that reduces manual toil and speeds up delivery
-                  </li>
-                  <li>
-                    Delivering AI-enhanced CI/CD pipelines serving commercial
-                    and federal (Public Trust) environments with compliance
-                    automation
-                  </li>
-                  <li>
-                    Building self-service platform products that enable 200+
-                    developers to leverage automated code review, security
-                    scanning, and remediation
-                  </li>
-                </ul>
-                <div class="skills-tags">
-                  <span>AI Agents</span>
-                  <span>Generative AI</span>
-                  <span>Platform Engineering</span>
-                  <span>CI/CD</span>
-                  <span>DevOps</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h3>Senior IT Tech Ops Manager</h3>
-                <h4>Alight Solutions</h4>
-                <p class="date">April 2024 - August 2025 | Remote</p>
-                <ul>
-                  <li>
-                    Supported enterprise AWS infrastructure with hands-on SRE,
-                    monitoring, and incident-response automation
-                  </li>
-                  <li>
-                    Automated operations workflows integrating PagerDuty and New
-                    Relic to improve incident response times
-                  </li>
-                  <li>
-                    Managed federal operations for the Federal Retirement Thrift
-                    Investment Board under Public Trust Clearance
-                  </li>
-                  <li>
-                    Directed cloud FinOps and capacity planning initiatives
-                  </li>
-                </ul>
-                <div class="skills-tags">
-                  <span>SRE</span>
-                  <span>AWS</span>
-                  <span>Operations</span>
-                  <span>Monitoring</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h3>DevOps & SRE Manager</h3>
-                <h4>Wolters Kluwer</h4>
-                <p class="date">April 2023 - April 2024 | Remote</p>
-                <ul>
-                  <li>
-                    Built and scaled a 10-person engineering team while staying
-                    close to DevOps and SRE implementation work
-                  </li>
-                  <li>
-                    Implemented monitoring and automated remediation strategies
-                    using observability tooling
-                  </li>
-                  <li>
-                    Engineered Azure DevOps and Argo CD-based GitOps pipelines
-                    with Terraform IaC
-                  </li>
-                  <li>
-                    Reduced deployment lead time by 50% while maintaining
-                    enterprise security standards
-                  </li>
-                </ul>
-                <div class="skills-tags">
-                  <span>Azure DevOps</span>
-                  <span>Kubernetes</span>
-                  <span>Terraform</span>
-                  <span>Argo CD</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h3>Enterprise Tools and DevOps Manager</h3>
-                <h4>Fannie Mae</h4>
-                <p class="date">January 2021 - October 2022 | Remote</p>
-                <ul>
-                  <li>
-                    Built enterprise-scale cloud-native platforms and tooling
-                    used by 225+ engineering teams while leading a 14-member
-                    cross-functional group
-                  </li>
-                  <li>
-                    Drove platform transformation from legacy Jenkins pipelines
-                    to a unified GitLab, Terraform, and AWS architecture
-                  </li>
-                  <li>
-                    Designed and deployed a Compliance as Code framework that
-                    automated regulatory checks within release pipelines
-                  </li>
-                  <li>
-                    Delivered a Universal DevOps Pipeline product used
-                    organization-wide
-                  </li>
-                </ul>
-                <div class="skills-tags">
-                  <span>AWS</span>
-                  <span>Terraform</span>
-                  <span>GitLab</span>
-                  <span>DevOps</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <h3>Director of DevOps</h3>
-                <h4>WebMD Health Services</h4>
-                <p class="date">November 2017 - May 2020 | Remote</p>
-                <ul>
-                  <li>
-                    Founded the engineering program at Staywell (acquired by
-                    WebMD), establishing cloud infrastructure and delivery
-                    foundations
-                  </li>
-                  <li>
-                    Architected enterprise Kubernetes and Docker platform on AWS
-                  </li>
-                  <li>
-                    Built real-time operations platform with automated
-                    monitoring and infrastructure management
-                  </li>
-                  <li>
-                    Improved deployment frequency 3x through Agile
-                    transformation
-                  </li>
-                </ul>
-                <div class="skills-tags">
-                  <span>AWS</span>
-                  <span>Kubernetes</span>
-                  <span>Docker</span>
-                  <span>DevOps</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Skills Section -->
-      <section id="skills" class="section section-alt">
-        <div class="container">
-          <h2 class="section-title">Skills & Expertise</h2>
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h3>AI-Enabled Engineering</h3>
-              <ul>
-                <li>AI-Assisted Development</li>
-                <li>Developer Workflow Automation</li>
-                <li>Internal Tooling</li>
-                <li>Applied AI Strategy</li>
-                <li>Responsible AI Adoption</li>
-                <li>Prompt & Context Engineering</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h3>Research & Analysis</h3>
-              <ul>
-                <li>Scientific Computing Projects</li>
-                <li>Data Quality Analysis</li>
-                <li>Statistical Validation</li>
-                <li>Ablation Studies</li>
-                <li>Graph Analysis</li>
-                <li>Experiment Documentation</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h3>Platform & DevOps</h3>
-              <ul>
-                <li>CI/CD</li>
-                <li>GitOps</li>
-                <li>SRE</li>
-                <li>DevOps</li>
-                <li>Platform Engineering</li>
-                <li>Observability</li>
-                <li>Testing & Release Engineering</li>
-                <li>Compliance as Code</li>
-                <li>Disaster Recovery</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h3>Platform & Cloud</h3>
-              <ul>
-                <li>AWS</li>
-                <li>Azure</li>
-                <li>Kubernetes</li>
-                <li>Docker</li>
-                <li>Terraform</li>
-                <li>Infrastructure as Code</li>
-                <li>Container Orchestration</li>
-                <li>Cloud FinOps</li>
-              </ul>
-            </div>
-            <div class="skill-category">
-              <h3>Product & Team Delivery</h3>
-              <ul>
-                <li>Cross-Functional Collaboration</li>
-                <li>Product Delivery</li>
-                <li>Technical Leadership</li>
-                <li>Roadmapping</li>
-                <li>Stakeholder Communication</li>
-                <li>Disaster Recovery</li>
-                <li>Product Ownership</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education Section -->
-      <section id="education" class="section">
-        <div class="container">
-          <h2 class="section-title">Education</h2>
-          <div class="education-grid">
-            <div class="education-item">
-              <h3>Master of Science in Computer Science</h3>
-              <p class="institution">Georgia Institute of Technology</p>
-              <p class="status">Concentration in Human-Computer Interaction</p>
-            </div>
-            <div class="education-item">
-              <h3>Master of Business Administration (MBA)</h3>
-              <p class="institution">
-                Quantic School of Business and Technology
-              </p>
-            </div>
-            <div class="education-item">
-              <h3>Master's in Information Technology - Project Management</h3>
-              <p class="institution">American InterContinental University</p>
-            </div>
-            <div class="education-item">
-              <h3>Bachelor of Science in Game Design and Development</h3>
-              <p class="institution">Full Sail University</p>
-            </div>
-          </div>
-
-          <h2 class="section-title" style="margin-top: 3rem">Certifications</h2>
-          <div class="certifications-grid">
-            <span class="cert-badge">AWS Certified AI Practitioner</span>
-            <span class="cert-badge">AWS Certified Security - Specialty</span>
-            <span class="cert-badge">AWS Certified Developer - Associate</span>
-            <span class="cert-badge"
-              >AWS Certified Solutions Architect - Associate</span
-            >
-            <span class="cert-badge">MLOps - Google</span>
-            <span class="cert-badge">Associate Cloud Engineer - Google</span>
-            <span class="cert-badge">Quantum-Safe Cryptography - IBM</span>
-            <span class="cert-badge">Basics of Quantum Information - IBM</span>
-            <span class="cert-badge"
-              >HashiCorp Certified: Terraform Associate</span
-            >
-            <span class="cert-badge"
-              >Microsoft Certified: Azure Fundamentals</span
-            >
-            <span class="cert-badge">AI Programming with Python</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Writing Section -->
-      <section id="writing" class="section section-alt">
-        <div class="container">
-          <h2 class="section-title">Selected Writing</h2>
-          <p
-            style="
-              max-width: 760px;
-              margin: 0 auto 2rem;
-              text-align: center;
-              color: var(--text-secondary);
-              font-size: 1.05rem;
-            "
-          >
-            Long-form writing on AI, DevOps, platform engineering, education,
-            and emerging technology for builders, operators, and technical
-            teams.
-          </p>
-          <div class="writing-list">
-            <div class="writing-item featured">
-              <h3>
-                Beyond Human: The Journey from AI to Superintelligent Systems
-              </h3>
-              <p>
-                A comprehensive exploration of artificial intelligence evolution
-                and its trajectory toward superintelligence.
-              </p>
-            </div>
-            <div class="writing-item">
-              <h3>The DevOps Career Handbook</h3>
-            </div>
-            <div class="writing-item">
-              <h3>Quantum Leap: Quantum Computing for the Rest of Us</h3>
-            </div>
-            <div class="writing-item">
-              <h3>Mathematics Unlocked: The Power of Game-Based Learning</h3>
-            </div>
-            <div class="writing-item">
-              <h3>
-                Digital Future in Education: Paradoxes, Hopes and Realities
-              </h3>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section">
-        <div class="container">
-          <h2 class="section-title">Get In Touch</h2>
-          <div class="contact-content">
-            <p class="contact-intro">
-              Interested in AI-enabled platform engineering, developer tooling,
-              DevOps leadership, or practical automation? Let's connect.
-            </p>
-            <div class="contact-links">
-              <a href="mailto:igloo-gulp-polar@duck.com" class="contact-link">
-                <span class="icon">✉️</span>
-                <span>igloo-gulp-polar@duck.com</span>
-              </a>
-              <a
-                href="https://linkedin.com/in/knightjohn"
-                target="_blank"
-                rel="noopener"
-                class="contact-link"
-              >
-                <span class="icon">💼</span>
-                <span>linkedin.com/in/knightjohn</span>
-              </a>
-              <a
-                href="https://github.com/jknight137"
-                target="_blank"
-                rel="noopener"
-                class="contact-link"
-              >
-                <span class="icon">💻</span>
-                <span>github.com/jknight137</span>
-              </a>
-            </div>
-            <div class="additional-info">
-              <p>
-                <strong>Languages:</strong> English (native), Spanish
-                (native/bilingual), Portuguese (elementary)
-              </p>
-              <p><strong>Security Clearance:</strong> Public Trust Clearance</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2026 John Knight. All rights reserved.</p>
+          <a class="research-note" href="#education"><span>Ph.D. research in progress</span><strong>Computer Engineering · Texas A&amp;M <span aria-hidden="true">↗</span></strong></a>
+        </aside>
       </div>
-    </footer>
-  </body>
+      <div class="container">
+        <dl class="career-scale" aria-label="Selected career scope">
+          <div><dt>225+</dt><dd>engineering teams served<span>Fannie Mae</span></dd></div>
+          <div><dt>8,000+</dt><dd>repositories supported<span>Alight Solutions</span></dd></div>
+          <div><dt>200+</dt><dd>engineers enabled by self-service<span>Alight Solutions</span></dd></div>
+          <div><dt>14</dt><dd>engineers on largest team led<span>Fannie Mae</span></dd></div>
+        </dl>
+      </div>
+    </section>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container section-layout">
+        <div class="section-heading">
+          <p class="eyebrow section-index">01 / Career</p>
+          <h2 id="experience-title">Professional <br />experience</h2>
+          <p>Leadership across financial services, healthcare, legal technology, and enterprise software.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience current">
+            <div class="experience-top"><h3>Priority Commerce</h3><p class="date">Sep 2026 - present</p></div>
+            <p class="role">Director of DevOps <span class="current-badge">Current</span></p>
+            <p>Lead 10 DevOps engineers across cloud infrastructure, CI/CD, Infrastructure as Code, and shared developer platforms.</p>
+            <ul>
+              <li>Own the Backstage internal developer platform roadmap, advancing self-service and reusable delivery patterns.</li>
+              <li>Partner with engineering, security, architecture, and business leaders on LLM-assistant use cases and responsible AI adoption across the SDLC.</li>
+              <li>Standardize release practices across GitHub Actions, Jenkins, TeamCity, Octopus Deploy, and GitLab.</li>
+            </ul>
+            <p class="tech-line">Backstage <span>·</span> Developer experience <span>·</span> AI adoption <span>·</span> CI/CD</p>
+          </article>
+          <article class="experience">
+            <div class="experience-top"><h3>Alight Solutions</h3><p class="date">Apr 2024 - Sep 2026</p></div>
+            <p class="role">Senior Manager, AI-Enabled Platform Engineering &amp; DevOps <span class="role-period">2025-2026</span></p>
+            <ul>
+              <li>Led DevOps, Release Enablement, and Developer Experience teams supporting 8,000+ repositories across commercial and federal environments.</li>
+              <li>Built a self-service platform enabling 200+ engineers to use AI-assisted code review, security scanning, and automated remediation.</li>
+              <li>Built production-ready LLM developer tooling using GitHub Copilot, retrieval-augmented generation (RAG), and Model Context Protocol (MCP) servers.</li>
+            </ul>
+            <p class="role secondary-role">Senior IT Tech Ops Manager <span class="role-period">2024-2025</span></p>
+            <p>Managed AWS operations and site reliability for federal environments, including monitoring, incident response automation, FinOps, and capacity planning. Integrated PagerDuty and New Relic into operational response.</p>
+            <p class="tech-line">RAG &amp; MCP <span>·</span> GitHub Copilot <span>·</span> AWS <span>·</span> SRE</p>
+          </article>
+          <article class="experience">
+            <div class="experience-top"><h3>Wolters Kluwer</h3><p class="date">Apr 2023 - Apr 2024</p></div>
+            <p class="role">Engineering Manager</p>
+            <p>Built and led a 10-person DevOps/SRE team for a global legal and regulatory technology platform. Reduced alert noise and operational workload through AIOps and monitoring automation.</p>
+            <p class="result"><strong>50% shorter deployment lead time</strong><span>Kubernetes, Terraform, Argo CD, and Azure DevOps-based GitOps delivery.</span></p>
+          </article>
+          <article class="experience">
+            <div class="experience-top"><h3>Fannie Mae</h3><p class="date">Jan 2021 - Oct 2022</p></div>
+            <p class="role">Enterprise Tools &amp; DevOps Manager</p>
+            <p>Directed a 14-engineer platform team serving 225+ engineering teams. Launched the Universal DevOps Pipeline, combining standardized CI/CD, Terraform Enterprise, AWS delivery patterns, and Compliance-as-Code controls.</p>
+            <p class="result"><strong>35% shorter build times</strong><span>Migrated legacy Jenkins delivery to GitLab CI and reusable templates.</span></p>
+          </article>
+          <article class="experience">
+            <div class="experience-top"><h3>WebMD Health Services <span class="company-note">(Staywell)</span></h3><p class="date">Nov 2017 - May 2020</p></div>
+            <p class="role">Director of DevOps</p>
+            <p>Founded and scaled the DevOps/platform engineering function for customer-facing healthcare systems. Architected an AWS Kubernetes platform with Terraform and established observability and automated incident response with New Relic, PagerDuty, and ChatOps.</p>
+            <p class="result"><strong>40% shorter deployments · 3x release frequency</strong><span>Cloud infrastructure and delivery automation for healthcare systems.</span></p>
+          </article>
+          <article class="experience">
+            <div class="experience-top"><h3>Walmart <span class="company-note">(Data Cafe)</span></h3><p class="date">Nov 2015 - Jun 2017</p></div>
+            <p class="role">Technical DevOps Architect Consultant</p>
+            <p>Architected cloud and continuous delivery foundations for an analytics organization, cutting deployment errors 50% through automation.</p>
+          </article>
+          <details class="earlier-work">
+            <summary>Earlier engineering &amp; consulting <span aria-hidden="true">+</span></summary>
+            <dl class="earlier-list">
+              <div><dt>Acxiom</dt><dd>Senior DevOps Engineer · 2013-2015</dd></div>
+              <div><dt>Bank of America</dt><dd>DevOps Engineer · 2011-2012</dd></div>
+              <div><dt>Republic Bank</dt><dd>DevOps Engineer · 2010-2011</dd></div>
+              <div><dt>Fidelity Information Systems</dt><dd>DevOps Engineer · 2007-2010</dd></div>
+            </dl>
+            <p>Selected consulting for Apple, AT&amp;T, Equifax, Unity, and BP across Infrastructure as Code, CI/CD, containerization, and cloud/data platforms.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="section research-section" id="builds" aria-labelledby="research-title">
+      <div class="container">
+        <div class="research-heading"><div><p class="eyebrow section-index">02 / Selected work</p><h2 id="research-title">AI engineering, <br />research &amp; open source</h2></div><p>Independent work on research workflows, governed AI adoption, and LLM-guided scientific computing.</p></div>
+        <div class="project-list">
+          <article class="project">
+            <div class="project-number" aria-hidden="true">01</div>
+            <div class="project-title"><p class="eyebrow">Research tooling</p><h3>Research Plugin &amp; <br />multi-agent methods</h3></div>
+            <div class="project-description"><p>Developed a modular research-skill toolkit covering discovery, novelty review, experiment execution, replication, and independent verification.</p><p>My Ph.D. work investigates agent coordination, context transfer, and evidence-grounded evaluation.</p><p class="project-status">Toolkit development &amp; ongoing research</p></div>
+          </article>
+          <article class="project">
+            <div class="project-number" aria-hidden="true">02</div>
+            <div class="project-title"><p class="eyebrow">AI adoption &amp; governance</p><h3>AI Agent Capability <br />Maturity Model</h3><a class="text-link" href="https://github.com/jknight137/AI-CMM">Explore AI-CMM <span aria-hidden="true">↗</span></a></div>
+            <div class="project-description"><p>Created an open-source framework with six maturity levels across nine capability domains for organizational adoption of AI coding agents.</p><p>Includes an assessment rubric, governance templates, CI gates, and adoption roadmaps.</p><div class="maturity-scale" role="img" aria-label="Six maturity levels, from 0 to 5"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div><p class="scale-caption">Unaware <span>Adaptive</span></p></div>
+          </article>
+          <article class="project">
+            <div class="project-number" aria-hidden="true">03</div>
+            <div class="project-title"><p class="eyebrow">Scientific computing</p><h3>LLM-guided <br />code evolution</h3><a class="text-link" href="https://github.com/jknight137/gnn-funsearch">Explore the GNN project <span aria-hidden="true">↗</span></a></div>
+            <div class="project-description"><p>Built reproducible pipelines using local LLMs to evolve graph-model code, compare candidates with baselines, and evaluate transfer to real connectome data.</p><p>The work examines how synthetic benchmark performance relates to behavior on real data, including limits from overfitting.</p><a class="subtle-link" href="https://github.com/jknight137/lfads-funsearch-scheduling">Related: LFADS scheduling experiments <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+        <div class="independent-product">
+          <a class="game-art" href="https://store.steampowered.com/app/4493270/Chess_Master_Quest__Idle/" aria-label="Chess Master Quest - Idle on Steam"><img src="images/Artboard%201.png" alt="Chess Master Quest" width="1000" height="1000" loading="lazy" /></a>
+          <div><p class="eyebrow">Independent product / LearnTech Games</p><h3>Chess Master Quest - Idle</h3><p>Creator of a chess training and idle progression game, spanning gameplay, learning content, interface design, and save systems.</p></div>
+          <a class="text-link" href="https://store.steampowered.com/app/4493270/Chess_Master_Quest__Idle/">View on Steam <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container section-layout">
+        <div class="section-heading"><p class="eyebrow section-index">03 / Practice</p><h2 id="skills-title">Technical &amp; <br />leadership scope</h2></div>
+        <dl class="capability-list">
+          <div><dt>Architecture &amp; operations</dt><dd>AWS, Azure, GCP, Kubernetes, Terraform, Argo CD, GitOps, observability, SRE, distributed systems, FinOps.</dd></div>
+          <div><dt>Developer platforms</dt><dd>Backstage, self-service, CI/CD, GitHub Actions, Jenkins, GitLab, TeamCity, Octopus Deploy, DevSecOps, Compliance-as-Code.</dd></div>
+          <div><dt>AI engineering</dt><dd>Retrieval-augmented generation, Model Context Protocol servers, GitHub Copilot, LLM workflows, agent evaluation, AI adoption governance.</dd></div>
+          <div><dt>Engineering leadership</dt><dd>Technical strategy, team building, platform roadmaps, delivery standards, and collaboration across engineering, security, architecture, and business teams.</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section class="section education-section" id="education" aria-labelledby="education-title">
+      <div class="container section-layout">
+        <div class="section-heading"><p class="eyebrow section-index">04 / Education</p><h2 id="education-title">Education &amp; <br />credentials</h2></div>
+        <div>
+          <article class="phd"><p class="eyebrow">2026 - present / In progress</p><h3>Ph.D., Computer Engineering</h3><p class="institution">Texas A&amp;M University</p><p>Research focus: adaptive LLM agents, heterogeneous multi-agent orchestration, and evidence-grounded evaluation.</p></article>
+          <dl class="degree-list">
+            <div><dt>M.S., Computer Science</dt><dd>Georgia Institute of Technology <span>2021-2023</span></dd></div>
+            <div><dt>MBA</dt><dd>Quantic School of Business and Technology <span>2020-2021</span></dd></div>
+            <div><dt>Master's, Information Technology</dt><dd>American InterContinental University <span>2008-2009</span></dd></div>
+            <div><dt>B.S., Game Design and Development</dt><dd>Full Sail University <span>2003-2005</span></dd></div>
+          </dl>
+          <div class="certifications"><h3>Certifications &amp; training</h3><p>AWS Certified AI Practitioner · AWS Security - Specialty · AWS Solutions Architect - Associate · AWS Developer - Associate · Google Associate Cloud Engineer · HashiCorp Terraform Associate</p><p class="training">Additional training: Google MLOps.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section writing-section" id="writing" aria-labelledby="writing-title">
+      <div class="container section-layout">
+        <div class="section-heading"><p class="eyebrow section-index">05 / Writing</p><h2 id="writing-title">Selected writing</h2><p>Long-form work on AI, DevOps, computing, and education.</p></div>
+        <ul class="writing-list">
+          <li>Beyond Human: The Journey from AI to Superintelligent Systems</li>
+          <li>The DevOps Career Handbook</li>
+          <li>Quantum Leap: Quantum Computing for the Rest of Us</li>
+          <li>Mathematics Unlocked: The Power of Game-Based Learning</li>
+          <li>Digital Future in Education: Paradoxes, Hopes and Realities</li>
+        </ul>
+      </div>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div><p class="eyebrow">06 / Contact</p><h2 id="contact-title">Contact John</h2><p>AI platforms, infrastructure engineering, <br />developer experience, and research.</p><p class="contact-location">Plano, Texas</p></div>
+        <div class="contact-links">
+          <a href="mailto:igloo-gulp-polar@duck.com"><span><small>Email</small>igloo-gulp-polar@duck.com</span><span aria-hidden="true">↗</span></a>
+          <a href="https://linkedin.com/in/knightjohn"><span><small>LinkedIn</small>linkedin.com/in/knightjohn</span><span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/jknight137"><span><small>GitHub</small>github.com/jknight137</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p>© 2026 John Knight</p><p>Profile updated November 2026</p><a href="#about">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+</body>
 </html>
